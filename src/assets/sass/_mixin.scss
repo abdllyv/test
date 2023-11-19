@@ -1,0 +1,26 @@
+@mixin caption(
+  $captoinWidth,
+  $captionMrg,
+  $captionTxtAlg,
+  $captionPdd,
+  $textWidth,
+  $textMrg
+) {
+  .caption {
+    max-width: $captoinWidth;
+    margin: $captionMrg;
+    text-align: $captionTxtAlg;
+    padding: $captionPdd;
+    // max-width: 864px;
+    // margin: 0 auto;
+    // text-align: center;
+    // padding-bottom: 50px;
+
+    .text {
+      max-width: $textWidth;
+      margin: $textMrg;
+      //   max-width: 470px;
+      //   margin: 0 auto;
+    }
+  }
+}

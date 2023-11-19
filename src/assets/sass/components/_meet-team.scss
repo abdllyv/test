@@ -1,0 +1,114 @@
+@import "../mixin";
+
+.meet-team {
+  padding: 80px 0;
+  .container {
+    @include caption(864px, 0 auto, center, 0 0  50px 0, 470px, 0 auto);
+    .body {
+      display: flex;
+      justify-content: center;
+      gap: 3%;
+      .personal-card {
+        padding: 30px 40px;
+        background-color: #fff;
+        width: 26.8%;
+        .top {
+          width: 100%;
+          .profil-img {
+            max-width: 128px;
+            width: 100%;
+            aspect-ratio: 1/1;
+            margin: 0 auto;
+            border-radius: 100%;
+            overflow: hidden;
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+        .bottom {
+          text-align: center;
+          .job {
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 24px;
+            letter-spacing: 0.20000000298023224px;
+            color: #ffa62b;
+            margin: 5px 0;
+          }
+          .name {
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 24px;
+            letter-spacing: 0.1px;
+            color: #252b42;
+            margin-bottom: 5px;
+          }
+          .text {
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 20px;
+            letter-spacing: 0.2px;
+            color: #737373;
+            max-width: 150px;
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+  }
+}
+/* ------------------------------- Responsive ------------------------------- */
+@media (max-width: 1000px) {
+  .meet-team {
+    padding: 80px 0;
+    .container {
+      width: 100%;
+      padding: 0 42px;
+    }
+  }
+}
+@media (max-width: 850px) {
+  .meet-team {
+    padding: 75px 0 49px;
+    .container {
+      .body {
+        flex-wrap: wrap;
+        gap: 16%;
+        row-gap: 40px;
+        .personal-card {
+          width: 40.8%;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 600px) {
+  .meet-team {
+    .container {
+      .body {
+        gap: 8%;
+        row-gap: 25px;
+        .personal-card {
+          width: 45.8%;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 450px) {
+  .meet-team {
+    .container {
+      .caption {
+        padding-bottom: 45px;
+      }
+      .body {
+        row-gap: 30px;
+        .personal-card {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,58 @@
+@import "../mixin";
+.world {
+  padding-top: 50px;
+  .container {
+    .row {
+      align-items: center;
+      gap: 30px;
+      margin-bottom: 428px;
+      .caption {
+        .title {
+          max-width: 455px;
+          width: 100%;
+        }
+      }
+      @include caption(602px, 0, left, 50px 0 50px 0, 456px, 0);
+      .word-img {
+        max-width: 416px;
+        width: 100%;
+        img {
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
+/* ------------------------------- Responsive ------------------------------- */
+@media (max-width: 1000px) {
+  .world {
+    .container {
+      width: 100%;
+      padding: 0 42px;
+    }
+  }
+}
+@media (max-width: 750px) {
+  .world {
+    .container {
+      width: 100%;
+      padding: 0 42px;
+      .row {
+        flex-direction: column;
+        margin-bottom: 60px;
+        .caption {
+          .title {
+            max-width: 100%;
+          }
+          .text {
+            max-width: 100%;
+          }
+        }
+        .word-img {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}

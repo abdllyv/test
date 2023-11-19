@@ -1,0 +1,17 @@
+/* -------------------------------- Reset Code ------------------------------- */
+@import "./base";
+
+/* -------------------------------- Component ------------------------------- */
+@import "./components/header";
+@import "./components/footer";
+@import "./components/caption";
+
+// section
+@import "./components/banner";
+@import "./components/category";
+@import "./components/meet-team";
+@import "./components/world";
+@import "./components/contact";
+
+/* ---------------------------------- Page ---------------------------------- */
+@import "./pages/home";

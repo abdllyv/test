@@ -1,0 +1,212 @@
+@import "../mixin";
+.banner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  .bg-img {
+    width: 100%;
+    height: 729px;
+    object-fit: cover;
+  }
+  .container {
+    .row {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      .info {
+        z-index: 2;
+        @include caption(709px, 0 auto, center, 0 0 40px 0, 539px, 0 auto);
+        h1 {
+          font-size: 58px;
+          font-weight: 800;
+          line-height: 80px;
+          margin-bottom: 40px;
+        }
+        .btn-area {
+          display: flex;
+          width: 100%;
+          justify-content: center;
+          gap: 10px;
+          a {
+            padding: 10px;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 28px;
+            letter-spacing: 0.2px;
+            color: #fff;
+            background-color: transparent;
+            border: 1px solid #ffffff;
+            text-align: center;
+            border-radius: 37px;
+            width: 100%;
+          }
+          .primary-btn {
+            max-width: 185px;
+            background-color: #ffa62b;
+            border-color: transparent;
+          }
+          .secondary-btn {
+            max-width: 154px;
+          }
+        }
+      }
+    }
+  }
+  .static {
+    z-index: 2;
+    background-color: #fff;
+    .static-box {
+      position: absolute;
+      bottom: -90px;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      padding: 0 10px;
+      .roww {
+        width: 70.47%;
+        display: flex;
+        justify-content: center;
+        gap: 3%;
+        z-index: 2;
+        background-color: #fff;
+        padding: 20px 15px;
+        .card {
+          width: 25%;
+          display: flex;
+          align-items: center;
+          max-width: max-content;
+          gap: 15px;
+          .left-side {
+            display: flex;
+            svg {
+              width: 48px;
+            }
+          }
+          .right-side {
+            max-width: 135px;
+            .number {
+              font-size: 24px;
+              font-weight: 700;
+              line-height: 32px;
+              letter-spacing: 0.1px;
+              color: #252b42;
+            }
+            .text {
+              font-size: 14px;
+              font-weight: 600;
+              line-height: 24px;
+              letter-spacing: 0.2px;
+              color: #737373;
+            }
+          }
+        }
+      }
+    }
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: #00000080;
+  }
+}
+/* ------------------------------- responsive ------------------------------- */
+@media (max-width: 1000px) {
+  .banner {
+    .container {
+      .row {
+        padding: 0 42px;
+        .info {
+          h1 {
+            font-size: 48px;
+          }
+        }
+      }
+    }
+    .static {
+      .static-box {
+        .roww {
+          width: 100%;
+          margin: 0 42px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 850px) {
+  .banner {
+    .static {
+      .static-box {
+        padding: 0 10px;
+        .roww {
+          flex-wrap: wrap;
+          justify-content: space-around;
+          background-color: #fff;
+          gap: 10px;
+          padding: 20px 15px;
+          .card {
+            width: 40%;
+            max-width: none;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 600px) {
+  .banner {
+    .bg-img {
+      height: 1254px;
+    }
+    .container {
+      .row {
+        align-items: flex-start;
+        margin-top: 80px;
+        .info {
+          h1 {
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 57px;
+            letter-spacing: 0.2px;
+          }
+          .btn-area {
+            flex-direction: column;
+            align-items: center;
+            gap: 25px;
+          }
+        }
+      }
+    }
+
+    .static {
+      .static-box {
+        margin-bottom: 57px;
+        bottom: 0;
+        .roww {
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          background-color: transparent;
+          gap: 30px;
+          padding: 0;
+          .card {
+            max-width: 230px;
+            width: 100%;
+            padding: 19px 20px;
+            background-color: #fff;
+          }
+        }
+      }
+    }
+  }
+}

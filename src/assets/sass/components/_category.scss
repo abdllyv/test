@@ -1,0 +1,100 @@
+.category {
+  padding: 220px 0 80px;
+  .container {
+    .row {
+      width: 100%;
+      justify-content: center;
+      gap: 4%;
+      .card {
+        width: 22%;
+        padding: 35px 40px;
+        background-color: #fff;
+        &:last-child {
+          background: #00a0c1;
+          .category-name,
+          .text {
+            color: #fff;
+          }
+          .btn {
+            svg {
+              display: none;
+            }
+          }
+        }
+        .icon {
+          margin-bottom: 20px;
+          height: 48px;
+        }
+        .category-name {
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 24px;
+          letter-spacing: 0.1px;
+          color: #252b42;
+          margin-bottom: 20px;
+        }
+        .text {
+          font-size: 14px;
+          font-weight: 700;
+          line-height: 20px;
+          letter-spacing: 0.2px;
+          color: #737373;
+          margin-bottom: 20px;
+        }
+        .btn {
+          padding: 10px;
+          max-width: 124px;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+          background-color: #fff;
+          border: 1px solid #00a0c1;
+          color: #00a0c1;
+          border-radius: 37px;
+          span {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 28px;
+            letter-spacing: 0.2px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ------------------------------- Responsive ------------------------------- */
+@media (max-width: 1000px) {
+  .category {
+    .container {
+      width: 100%;
+      padding: 0 42px;
+      .row {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 4%;
+        row-gap: 30px;
+        .card {
+          width: 48%;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 450px) {
+  .category {
+    padding: 153px 0 196px;
+    .container {
+      .row {
+        flex-direction: column;
+        row-gap: 30px;
+        .card {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
